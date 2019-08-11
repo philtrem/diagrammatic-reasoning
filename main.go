@@ -7,21 +7,7 @@ import (
 )
 
 func main() {
-	// TODO: USE OUTPUTS AS INPUTS ?
 	rand.Seed(time.Now().UnixNano())
-	toPrint := make([]gridNode, 0)
-	for i := 0; i < 1000; i++ {
-		grid := newGridNode(6)
-		for grid.introduceNewSequence() {
-		}
-		if grid.isValid() {
-			toPrint = append(toPrint, grid)
-		}
-	}
-	for _, item := range toPrint {
-		item.print()
-	}
-	fmt.Println(len(toPrint))
 }
 
 const X = 0
